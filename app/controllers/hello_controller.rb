@@ -10,4 +10,8 @@ class HelloController < ApplicationController
     def list
         @books = Book.all
     end
+
+    def app_var
+        render plain: MY_APP['app_name'] #結果: https://wings.msn.to/imge/wings_logo.png
+    end
 end

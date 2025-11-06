@@ -1,0 +1,18 @@
+COMMON: $COMMON
+    author: "YAMADA, Yoshihiro"
+    logo:
+        source: "https://wings.msn.to/image/wings.jpg"
+        width: 215
+        height: 87
+
+development:
+    hoge: "dev"
+    <<: *COMMON
+
+test:
+    hoge: "test"
+    <<: *COMMON
+
+test:
+    hoge: "test"
+    <<: *COMMON
