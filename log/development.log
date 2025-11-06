@@ -8,3 +8,210 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 26ms (Views: 2.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2025-11-05 13:44:52 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/katashokousuke/.rbenv/versions/3.3.8/lib/ruby/gems/3.3.0/gems/railties-8.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/katashokousuke/.rbenv/versions/3.3.8/lib/ruby/gems/3.3.0/gems/railties-8.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/hello/index" for ::1 at 2025-11-05 13:45:01 +0900
+  
+SyntaxError (/Users/katashokousuke/Desktop/デスクトップ - 片所宏介のMacBook Air/project/sample/app/controllers/hello_controller.rb:3: syntax error, unexpected ':', expecting `end' or dummy end
+        render plain : "hello, world!"
+                     ^
+):
+  
+app/controllers/hello_controller.rb:3: syntax error, unexpected ':', expecting `end' or dummy end
+Started GET "/favicon.ico" for ::1 at 2025-11-05 13:45:01 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/hello/index" for ::1 at 2025-11-05 13:46:08 +0900
+Processing by HelloController#index as HTML
+  Rendering text template
+  Rendered text template (Duration: 0.0ms | GC: 0.0ms)
+Completed 200 OK in 25ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.5ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-11-05 14:00:45 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/katashokousuke/.rbenv/versions/3.3.8/lib/ruby/gems/3.3.0/gems/railties-8.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/katashokousuke/.rbenv/versions/3.3.8/lib/ruby/gems/3.3.0/gems/railties-8.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | GC: 0.0ms)
+Completed 200 OK in 15ms (Views: 1.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/hello/view" for 127.0.0.1 at 2025-11-05 14:00:59 +0900
+Processing by HelloController#view as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/view.html.erb within layouts/application
+  Rendered hello/view.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 27ms (Views: 3.7ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-05 09:25:38.552452', '2025-11-05 09:25:38.552453') RETURNING "key" /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+Migrating to CreateBooks (20251105092101)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Sample'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "isbn" varchar, "title" varchar, "price" varchar, "integer" varchar, "piblisher" varchar, "published" date, "dl" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251105092101') RETURNING "version" /*application='Sample'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Sample'*/[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mPRAGMA foreign_keys /*application='Sample'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='Sample'*/[0m
+  [1m[36mFixtures Load (0.2ms)[0m  [1m[31mDELETE FROM "books";
+INSERT INTO "books" ("id", "isbn", "title", "price", "integer", "piblisher", "published", "dl", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2025-11-05', 0, '2025-11-05 09:30:46.390776', '2025-11-05 09:30:46.390776'), (298486374, 'MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2025-11-05', 0, '2025-11-05 09:30:46.390776', '2025-11-05 09:30:46.390776')[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='Sample'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" /*application='Sample'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "isbn" varchar, "title" varchar, "price" varchar, "integer" varchar, "piblisher" varchar, "published" date, "dl" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20251105092101) /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-05 09:44:47.256605', '2025-11-05 09:44:47.256605') RETURNING "key" /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '68520d19493ffcb8ea629bb880ddc9ecb1540309', '2025-11-05 09:44:47.257405', '2025-11-05 09:44:47.257405') RETURNING "key" /*application='Sample'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" /*application='Sample'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "isbn" varchar, "title" varchar, "price" varchar, "integer" varchar, "piblisher" varchar, "published" date, "dl" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20251105092101) /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-05 09:44:47.265669', '2025-11-05 09:44:47.265669') RETURNING "key" /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.0ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-11-05 09:44:47.266214' WHERE "ar_internal_metadata"."key" = 'environment' /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '68520d19493ffcb8ea629bb880ddc9ecb1540309', '2025-11-05 09:44:47.267128', '2025-11-05 09:44:47.267128') RETURNING "key" /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "books" /*application='Sample'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "isbn" varchar, "title" varchar, "price" varchar, "integer" varchar, "piblisher" varchar, "published" date, "dl" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Sample'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20251105092101) /*application='Sample'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-05 10:01:23.828605', '2025-11-05 10:01:23.828606') RETURNING "key" /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '68520d19493ffcb8ea629bb880ddc9ecb1540309', '2025-11-05 10:01:23.829711', '2025-11-05 10:01:23.829712') RETURNING "key" /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+Migrating to RenamePiblisherToPublisherInBooks (20251105100509)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Sample'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='Sample'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='Sample'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TEMPORARY TABLE "abooks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "isbn" varchar, "title" varchar, "price" varchar, "integer" varchar, "publisher" varchar, "published" date, "dl" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Sample'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "abooks" ("id","isbn","title","price","integer","publisher","published","dl","created_at","updated_at")
+                     SELECT "id","isbn","title","price","integer","piblisher","published","dl","created_at","updated_at" FROM "books" /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "books" /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "isbn" varchar, "title" varchar, "price" varchar, "integer" varchar, "publisher" varchar, "published" date, "dl" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Sample'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "books" ("id","isbn","title","price","integer","publisher","published","dl","created_at","updated_at")
+                     SELECT "id","isbn","title","price","integer","publisher","published","dl","created_at","updated_at" FROM "abooks" /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE "abooks" /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251105100509') RETURNING "version" /*application='Sample'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Sample'*/[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[35mPRAGMA foreign_keys /*application='Sample'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='Sample'*/[0m
+  [1m[36mFixtures Load (0.1ms)[0m  [1m[31mDELETE FROM "books";
+INSERT INTO "books" ("id", "isbn", "title", "price", "integer", "publisher", "published", "dl", "created_at", "updated_at") VALUES (1, '978-4-297-13919-3', '3ステップで学ぶ MySQL入門', '2860', NULL, '技術評論社', '2024-01-25', 0, '2025-11-05 10:06:48.383178', '2025-11-05 10:06:48.383178'), (2, '978-4-7981-8094-6', '独習Java 第6版', '3278', NULL, '翔泳社', '2024-02-15', 1, '2025-11-05 10:06:48.383178', '2025-11-05 10:06:48.383178'), (3, '978-4-8156-1948-0', 'これからはじめるReact実践入門', '4400', NULL, 'SBクリエイティブ', '2023-09-28', 0, '2025-11-05 10:06:48.383178', '2025-11-05 10:06:48.383178'), (4, '978-4-297-13685-7', 'Nuxt 3 フロントエンド開発の教科書', '3520', NULL, '技術評論社', '2023-09-22', 1, '2025-11-05 10:06:48.383178', '2025-11-05 10:06:48.383178'), (5, '978-4-296-07070-1', '作って学べるHTML＋JavaScript', '2420', NULL, '日経BP', '2023-07-06', 0, '2025-11-05 10:06:48.383178', '2025-11-05 10:06:48.383178'), (6, '978-4-297-13288-0', '改訂3版JavaScript本格入門', '3520', NULL, '技術評論社', '2023-02-13', 1, '2025-11-05 10:06:48.383178', '2025-11-05 10:06:48.383178'), (7, '978-4-7981-7613-0', 'Androidアプリ開発の教科書', '3135', NULL, '翔泳社', '2023-01-24', 1, '2025-11-05 10:06:48.383178', '2025-11-05 10:06:48.383178'), (8, '978-4-627-85711-7', 'Pythonでできる! 株価データ分析', '2970', NULL, '森北出版', '2023-01-21', 1, '2025-11-05 10:06:48.383178', '2025-11-05 10:06:48.383178'), (9, '978-4-297-13072-5', 'Vue 3 フロントエンド開発の教科書', '3960', NULL, '技術評論社', '2022-09-28', 1, '2025-11-05 10:06:48.383178', '2025-11-05 10:06:48.383178'), (10, '978-4-7981-7556-0', '独習C# 第5版', '4180', NULL, '翔泳社', '2022-07-21', 1, '2025-11-05 10:06:48.383178', '2025-11-05 10:06:48.383178')[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='Sample'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check /*application='Sample'*/[0m
+Started GET "/hello/list" for 127.0.0.1 at 2025-11-06 11:39:56 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  
+ActionController::RoutingError (No route matches [GET] "/hello/list"):
+  
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-11-06 11:39:56 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for 127.0.0.1 at 2025-11-06 11:40:21 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/katashokousuke/.rbenv/versions/3.3.8/lib/ruby/gems/3.3.0/gems/railties-8.0.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/katashokousuke/.rbenv/versions/3.3.8/lib/ruby/gems/3.3.0/gems/railties-8.0.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | GC: 0.0ms)
+Completed 200 OK in 17ms (Views: 0.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/list" for 127.0.0.1 at 2025-11-06 11:40:27 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/list"):
+  
+Started GET "/hello/list" for 127.0.0.1 at 2025-11-06 11:40:38 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/hello/list"):
+  
+Started GET "/hello/" for 127.0.0.1 at 2025-11-06 11:40:42 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/hello"):
+  
+Started GET "/hello/view" for 127.0.0.1 at 2025-11-06 11:40:47 +0900
+Processing by HelloController#view as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/view.html.erb within layouts/application
+  Rendered hello/view.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | GC: 0.1ms)
+Completed 200 OK in 19ms (Views: 2.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/hello/list" for 127.0.0.1 at 2025-11-06 11:57:41 +0900
+Processing by HelloController#list as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/list.html.erb within layouts/application
+  Rendered hello/list.html.erb within layouts/application (Duration: 0.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | GC: 2.8ms)
+Completed 200 OK in 27ms (Views: 4.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.8ms)
+
+
+Started GET "/hello/list" for 127.0.0.1 at 2025-11-06 11:58:07 +0900
+Processing by HelloController#list as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering hello/list.html.erb within layouts/application
+  [1m[36mBook Load (1.6ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='list',application='Sample',controller='hello'*/[0m
+  ↳ app/views/hello/list.html.erb:9
+  Rendered hello/list.html.erb within layouts/application (Duration: 5.4ms | GC: 0.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.1ms)
+Completed 200 OK in 21ms (Views: 4.7ms | ActiveRecord: 2.0ms (1 query, 0 cached) | GC: 0.2ms)
+
+
