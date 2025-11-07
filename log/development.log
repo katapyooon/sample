@@ -8,3 +8,91 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 26ms (Views: 2.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
 
 
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Sample'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-11-06 12:33:16.953621', '2025-11-06 12:33:16.953621') RETURNING "key" /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+Migrating to CreateBooks (20251106123257)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Sample'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "books" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "isbn" varchar, "title" varchar, "price" integer, "publisher" varchar, "published" date, "dl" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20251106123257') RETURNING "version" /*application='Sample'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Sample'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='Sample'*/[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[35mPRAGMA foreign_keys /*application='Sample'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='Sample'*/[0m
+  [1m[36mFixtures Load (0.2ms)[0m  [1m[31mDELETE FROM "books";
+INSERT INTO "books" ("id", "isbn", "title", "price", "publisher", "published", "dl", "created_at", "updated_at") VALUES (1, '978-4-297-13919-3', '3ステップで学ぶ MySQL入門', 2860, '技術評論社', '2024-01-25', 0, '2025-11-06 12:35:26.725672', '2025-11-06 12:35:26.725672'), (2, '978-4-7981-8094-6', '独習Java 第6版', 3278, '翔泳社', '2024-02-15', 1, '2025-11-06 12:35:26.725672', '2025-11-06 12:35:26.725672'), (3, '978-4-8156-1948-0', 'これからはじめるReact実践入門', 4400, 'SBクリエイティブ', '2023-09-28', 0, '2025-11-06 12:35:26.725672', '2025-11-06 12:35:26.725672'), (4, '978-4-297-13685-7', 'Nuxt 3 フロントエンド開発の教科書', 3520, '技術評論社', '2023-09-22', 1, '2025-11-06 12:35:26.725672', '2025-11-06 12:35:26.725672'), (5, '978-4-296-07070-1', '作って学べるHTML＋JavaScript', 2420, '日経BP', '2023-07-06', 0, '2025-11-06 12:35:26.725672', '2025-11-06 12:35:26.725672'), (6, '978-4-297-13288-0', '改訂3版JavaScript本格入門', 3520, '技術評論社', '2023-02-13', 1, '2025-11-06 12:35:26.725672', '2025-11-06 12:35:26.725672'), (7, '978-4-7981-7613-0', 'Androidアプリ開発の教科書', 3135, '翔泳社', '2023-01-24', 1, '2025-11-06 12:35:26.725672', '2025-11-06 12:35:26.725672'), (8, '978-4-627-85711-7', 'Pythonでできる! 株価データ分析', 2970, '森北出版', '2023-01-21', 1, '2025-11-06 12:35:26.725672', '2025-11-06 12:35:26.725672'), (9, '978-4-297-13072-5', 'Vue 3 フロントエンド開発の教科書', 3960, '技術評論社', '2022-09-28', 1, '2025-11-06 12:35:26.725672', '2025-11-06 12:35:26.725672'), (10, '978-4-7981-7556-0', '独習C# 第5版', 4180, '翔泳社', '2022-07-21', 1, '2025-11-06 12:35:26.725672', '2025-11-06 12:35:26.725672')[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='Sample'*/[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='Sample'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_key_check /*application='Sample'*/[0m
+Started GET "/books" for 127.0.0.1 at 2025-11-06 21:36:15 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Sample',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/_book.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/index.html.erb within layouts/application (Duration: 12.2ms | GC: 2.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | GC: 3.7ms)
+Completed 200 OK in 58ms (Views: 16.8ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 13.9ms)
+
+
+Started GET "/books.json" for 127.0.0.1 at 2025-11-06 21:42:37 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+Processing by BooksController#index as JSON
+  Rendering books/index.json.jbuilder
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Sample',controller='books'*/[0m
+  ↳ app/views/books/index.json.jbuilder:1
+  Rendered collection of books/_book.json.jbuilder [10 times] (Duration: 0.6ms | GC: 0.0ms)
+  Rendered books/index.json.jbuilder (Duration: 14.6ms | GC: 9.2ms)
+Completed 200 OK in 44ms (Views: 15.5ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 12.4ms)
+
+
+Started GET "/books" for 127.0.0.1 at 2025-11-07 10:53:56 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Sample'*/[0m
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" /*action='index',application='Sample',controller='books'*/[0m
+  ↳ app/views/books/index.html.erb:8
+  Rendered books/_book.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/index.html.erb within layouts/application (Duration: 7.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | GC: 0.0ms)
+Completed 200 OK in 35ms (Views: 8.8ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/books/6" for 127.0.0.1 at 2025-11-07 10:54:05 +0900
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mBook Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = 6 LIMIT 1 /*action='show',application='Sample',controller='books'*/[0m
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_book.html.erb (Duration: 0.0ms | GC: 0.0ms)
+  Rendered books/show.html.erb within layouts/application (Duration: 0.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | GC: 0.0ms)
+Completed 200 OK in 21ms (Views: 0.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
